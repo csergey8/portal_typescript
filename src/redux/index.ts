@@ -1,0 +1,1 @@
+export { getNews, getCryptoPrice } from './actions';

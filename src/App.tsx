@@ -1,26 +1,26 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container from '@material-ui/core/Container';
+import { NewsContainer } from './components/News';
+import { CryptoContainer } from './components/Crypto';
+import { AppProvider } from './context';
+import { FlightTicketsContainer } from './components/FlightTickets';
 
-function App() {
+
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <Container maxWidth="xl" style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <NewsContainer />
+        <FlightTicketsContainer />
+        <CryptoContainer />
+      </Container>
+    </AppProvider>
   );
 }
+
+
 
 export default App;
