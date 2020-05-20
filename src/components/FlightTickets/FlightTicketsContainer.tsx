@@ -25,6 +25,8 @@ const FlightTicketsContainer = () => {
 
   const [open, setOpen] = React.useState(false);
 
+  const [options, setOptions] = React.useState([]);
+
   const handleDateChange = (date: any) => {
     setSelectedDate(date);
   };
@@ -51,7 +53,7 @@ const FlightTicketsContainer = () => {
         onClose={() => {
           setOpen(false);
         }}
-        options={originAutcomplete}
+        options={options}
         getOptionSelected={(option, value) => option.name === value.name}
         getOptionLabel={(option) => option.name}
         renderInput={(params: any) => (
@@ -67,7 +69,7 @@ const FlightTicketsContainer = () => {
         onClose={() => {
           setOpen(false);
         }}
-        options={destinationAutocomplete}
+        options={options}
         getOptionSelected={(option, value) => option.name === value.name}
         getOptionLabel={(option) => option.name}
         renderInput={(params: any) => (
