@@ -25,7 +25,7 @@ const FlightTicketsContainer = () => {
 
   const [open, setOpen] = React.useState(false);
 
-  const [options, setOptions] = React.useState([]);
+  const [options, setOptions] = React.useState([{name: 'Yo'}]);
 
   const handleDateChange = (date: any) => {
     setSelectedDate(date);
@@ -44,7 +44,9 @@ const FlightTicketsContainer = () => {
       <Typography variant="h6" component="h6">
         Flight Tickets
       </Typography>
-      <Autocomplete
+      <TextField id="outlined-basic" label="Origin" variant="outlined" />
+      <TextField id="outlined-basic" label="Destination" variant="outlined" />
+      {/*<Autocomplete
         id="asynchronous-demo"
         open={open}
         onOpen={() => {
@@ -75,7 +77,7 @@ const FlightTicketsContainer = () => {
         renderInput={(params: any) => (
           <TextField id="outlined-basic" label="Destination" variant="outlined" />
         )}
-      />
+        />*/}
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
       <KeyboardDatePicker
           disableToolbar

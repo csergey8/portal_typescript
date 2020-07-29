@@ -63,3 +63,7 @@ export const airportsFinderApi = {
 export const travelPayoutsApi = {
   autocompleteRequest: async (text: any) => travelPayoutsInstance.get('', { params: { term: text, locale: 'en', 'types[]': 'country', callback: 'function'}})
 }
+
+export const cityAndAirportsListApi = {
+  getList: async () => axios.get('https://raw.githubusercontent.com/mwgg/Airports/master/airports.json')
+} 

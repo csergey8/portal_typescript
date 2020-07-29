@@ -45,8 +45,7 @@ const getCoords = async () => {
 }
 
 
-const AppContext = 
-React.createContext<{ state: UserInfoState; getUserInfo: () => void }>({state: initialState, getUserInfo: () => null})
+const AppContext = React.createContext<{ state: UserInfoState; getUserInfo: () => void }>({state: initialState, getUserInfo: () => null})
 
 const AppProvider: React.FC = ({ children }) => {
   
